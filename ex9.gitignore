@@ -1,0 +1,29 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 1 Solution
+ *  Copyright 2021 Uday Gudipudi
+ */
+
+import java.util.*;
+class Main {
+
+  static int GALLONS = 350; 
+
+  public static void main(String[] args) {
+    
+    Scanner scan = new Scanner(System.in);
+
+    System.out.print("What is the length of the room in feet? ");  
+    double length= scan.nextDouble(); 
+    System.out.print("What is the width of the room in feet? "); 
+    double width= scan.nextDouble();
+
+    double realarea = length * width;
+
+    double area = (realarea / GALLONS) ;
+
+    area = Math.ceil(area);
+
+    System.out.print("You will need to purchase "+area+" gallons of paint to cover "+realarea+" square feet.");
+
+  }
+}
